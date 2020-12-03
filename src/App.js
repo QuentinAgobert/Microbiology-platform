@@ -3,20 +3,29 @@ import React from "react";
 import styled from "styled-components";
 // Components
 import GlobalStyles from "./components/GlobalStyles";
-import MicroContainer from "./components/MicroContainer";
+import Nav from "./components/Nav";
+// Pages
+import MicroPage from "./pages/MicroPage";
+// Router
+import { Route, Switch, useLocation } from "react-router-dom";
 
 function App() {
+    const location = useLocation();
   return (
     <StyledApp>
         <GlobalStyles />
-        <MicroContainer />
+        <Nav />
+        <Switch>
+            <Route path="/microorganismes">
+                <MicroPage />
+            </Route>
+        </Switch>
+        
     </StyledApp>
   );
 }
 
 const StyledApp = styled.div`
-    padding-top: 3rem;
-    padding-left: 3rem;
 `;
 
 export default App;

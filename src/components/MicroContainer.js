@@ -26,19 +26,16 @@ const MicroContainer = () => {
 };
 
 const StyledMicroContainer = styled.div`
-    font-family: 'Poppins', sans-serif;
     padding: 1rem;
     h1 {
-        font-weight: lighter;
         font-size: 1.5rem;
+        font-style: italic;
     }
     h2 {
-        font-weight: lighter;
         font-size: 1.2rem;
     }
     p {
-        font-weight: lighter;
-        font-size: 1rem;
+        font-size: 1.0rem;
     }
 `;
 
