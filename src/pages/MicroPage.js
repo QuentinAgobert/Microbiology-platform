@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // Styles
 import styled from "styled-components";
 // Components
@@ -6,16 +6,21 @@ import MicroNav from "../components/MicroNav";
 import MicroContainer from "../components/MicroContainer";
 // Router
 import { Route, Switch, useLocation, useRouteMatch } from "react-router-dom";
+// MicroState
+import { MicroState } from "../microState";
 
 const MicroPage = () => {
     const location = useLocation();
+    const [microOrganisms, setMicroOrganisms] = useState(MicroState);
     return (
         <StyledMicroPage>
-            <MicroNav />
+            <MicroNav microOrganisms={microOrganisms} />
             <Switch>
-                <Route path="/microorganismes/Emilio">
-                    <MicroContainer />
-                </Route>
+                { microOrganisms.map((microOrganism) => (
+                    <Route path={`/microorganismes/${microOrganism.name}`}>
+                        <MicroContainer microOrganism={microOrganism} />
+                    </Route>
+                )) }
             </Switch>
         </StyledMicroPage>
     );

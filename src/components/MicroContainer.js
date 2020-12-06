@@ -1,16 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 // Styles
 import styled from "styled-components";
-// MicroState
-import { MicroState } from "../microState";
 
-const MicroContainer = () => {
-    const [microOrganisms, setMicroOrganisms] = useState(MicroState);
-    const [microOrganism, setMicroOrganism] = useState(null);
-    useEffect(() => {
-        const currentMicroOrganism = microOrganisms[0];
-        setMicroOrganism(currentMicroOrganism);
-    }, [microOrganisms]);
+const MicroContainer = ({ microOrganism }) => {
     return (
         <>
             {microOrganism && (

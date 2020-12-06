@@ -3,15 +3,14 @@ import React from "react";
 import styled from "styled-components";
 // Router
 import { Link } from "react-router-dom";
-// MicroState
-import { MicroState } from "../microState";
 
-const MicroNav = () => {
+const MicroNav = ({ microOrganisms }) => {
     return (
         <StyledMicroNav>
             <ul>
-                <li><Link to="/microorganismes/Emilio">Emilio</Link></li>
-                <li><Link to="/microorganismes/Toto">Toto</Link></li>
+                { microOrganisms.map((microOrganism) => (
+                    <li><Link to={`/microorganismes/${microOrganism.name}`}>{microOrganism.name}</Link></li>
+                )) }
             </ul>
         </StyledMicroNav>
     );

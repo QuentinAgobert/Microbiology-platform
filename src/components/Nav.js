@@ -9,12 +9,10 @@ import Logo from "../img/Microbiomicon.png";
 const Nav = () => {
     return (
         <StyledNav>
-            <div className="logo-title">
+            <Link to="/" className="logo-title">
                 <img src={Logo} alt="logo"/>
-                <div className="title">
-                    <h1><Link to="/">MICROBIOMICON</Link></h1>
-                </div>
-            </div>
+                <h1>MICROBIOMICON</h1>
+            </Link>
             <ul>
                 <li>
                     <Link to="/microorganismes">Micro-organismes</Link>
@@ -38,28 +36,24 @@ const Nav = () => {
 
 const StyledNav = styled.nav`
     background: #5f0301;
-    height: 7vw;
     padding: 0rem 6rem;
     display: flex;
     justify-content: center;
     .logo-title {
+        padding: 1rem 0rem;
         display: flex;
         align-items: center;
         width: 25%;
         img{
             padding-left: 2rem;
-            width: 30%;
+            width: 25%;
         }
-        .title {
+        h1 {
             padding-left: 1rem;
-            h1 {
-                font-size: 2rem;
-            }
-            a {
-                text-decoration: none;
-                color: white;
-                font-family: 'Condiment', cursive;
-            }
+            font-size: 2rem;
+            text-decoration: none;
+            color: white;
+            font-family: 'Condiment', cursive;
         }
     }
     ul {
