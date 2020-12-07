@@ -24,7 +24,7 @@ const Home = () => {
 
 const StyledHome = styled.div`
     background: lightcoral;
-    width: 75%;
+    width: 70%;
     padding: 3rem;
     margin: auto;
     display: flex;
