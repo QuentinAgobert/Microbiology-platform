@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 // Image
 import Logo from "../img/Microbiomicon_petit.png";
-import Test from "../img/Test.svg";
+import Mask from "../img/Mask.svg";
 import Bacteria from "../img/Bacteria.svg";
 import Culture from "../img/Culture.svg";
 import Arbre from "../img/Arbre.svg";
@@ -15,84 +15,109 @@ import Techniques from "../img/Techniques.svg";
 const Nav = () => {
     return (
         <StyledNav>
-            <Link to="/" className="logo-title">
-                <img src={Logo} alt="logo"/>
-                <img className="test" src={Test} alt="test"/>
-                <h1>MICROBIOMICON</h1>
-            </Link>
-            <ul>
-                <li>
-                    <Link to="/microorganismes">
-                        <img src={Bacteria} alt="Image section microorganismes"/>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/milieux-de-culture">
-                        <img src={Culture} alt="Image section milieux de culture"/>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/test-identification">
-                        <img src={Identification} alt="Image section test d'identification"/>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/arbre-identification">
-                        <img src={Arbre} alt="Image section arbre d'identification"/>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/techniques">
-                        <img src={Techniques} alt="Image section techniques"/>
-                    </Link>
-                </li>
-            </ul>
+            <div className="nav-title">
+                <img className="mask" src={Mask} alt="mask"/>
+                <Link to="/">
+                    <img className="logo" src={Logo} alt="logo"/>
+                </Link>
+                <Link to="/">
+                    <h1>MICROBIOMICON</h1>
+                </Link>
+            </div>
+            <div className="nav-links">
+                <ul>
+                    <li className="toto1">
+                        <Link to="/microorganismes">
+                            <img src={Bacteria} alt="Section microorganismes"/>
+                        </Link>
+                    </li>
+                    <li className="toto2">
+                        <Link to="/milieux-de-culture">
+                            <img src={Culture} alt="Section milieux de culture"/>
+                        </Link>
+                    </li>
+                    <li className="toto3">
+                        <Link to="/test-identification">
+                            <img src={Identification} alt="Section test d'identification"/>
+                        </Link>
+                    </li>
+                    <li className="toto4">
+                        <Link to="/arbre-identification">
+                            <img src={Arbre} alt="Section arbre d'identification"/>
+                        </Link>
+                    </li>
+                    <li className="toto5">
+                        <Link to="/techniques">
+                            <img src={Techniques} alt="Section techniques"/>
+                        </Link>
+                    </li>
+                </ul>
+            </div>
         </StyledNav>
     );
 };
 
+const StyledBar = styled.div`
+
+`;
+
 const StyledNav = styled.nav`
-    padding: 1rem 6rem;
+    margin-top: 1rem;
+    height: 100px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    .logo-title {
-        padding: 1rem 0rem;
+    //background: lightgreen;
+
+    .nav-title {
+        position: relative;
+        //background: lightblue;
+        padding: 0rem 1rem;
+        margin-right: 8rem;
         display: flex;
+        flex-direction: row;
         align-items: center;
-        width: 25%;
-        .test {
+        justify-content: center;
+        .mask {
+            height: 100px;
             position: absolute;
-            top: 1rem;
-            left: 19.5%;  
-            width: 19.5%;
-            z-index: 1;
+            left: 0%;
         }
-        img{
-            padding-left: 2rem;
-            width: 25%;
-            z-index: 2;
+        .logo {
+            margin-top: 0.5rem;
+            position: relative;
+            width: 70px;
+            height: 70px;
         }
         h1 {
-            padding-left: 1rem;
-            padding-top: 0.7rem;
+            position: relative;
+            padding: 0.75rem 1rem 0rem 1rem;
             font-size: 2rem;
             text-decoration: none;
             color: white;
             font-family: 'Condiment', cursive;
-            z-index: 2;
         }
     }
-    ul {
-        display: flex;
-        align-items: center;
-        list-style: none;
-        li {
-            img {
-                width: 40%;
+
+    .nav-links {
+        ul {
+            //background: lightcoral;
+            padding: 0rem 1rem;
+            display: flex;
+            align-items: center;
+            list-style: none;
+            li {
+                padding: 0rem 2rem;
+                img {
+                    margin-top: 0.5rem;
+                    width: 65px;
+                    height: 65px;
+                }
+                &:hover {
+                    outline: solid 3px #9D1212;
+                    content: "Micro-organismes";
+                }
             }
-        }
-        a {
-            color: black;
         }
     }
 `;

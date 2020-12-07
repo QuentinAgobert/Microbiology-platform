@@ -23,7 +23,7 @@ const Home = () => {
 };
 
 const StyledHome = styled.div`
-    background: lightcoral;
+    //background: lightcoral;
     width: 70%;
     padding: 3rem;
     margin: auto;

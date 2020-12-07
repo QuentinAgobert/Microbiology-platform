@@ -5,13 +5,12 @@ import styled from "styled-components";
 const Example = () => {
     return (
         <StyledExample>
-            <h1>Example</h1>
         </StyledExample>
     );
 };
 
 const StyledExample = styled.div`
-    background: lightyellow;
+    //background: lightyellow;
     width: 40%;
 `;
 

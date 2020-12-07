@@ -16,6 +16,7 @@ function App() {
     <StyledApp>
         <GlobalStyles />
         <Nav />
+        <StyledBar />
         <Switch>
             <Route exact path="/">
                 <Home />
@@ -24,10 +25,17 @@ function App() {
                 <MicroPage />
             </Route>
         </Switch>
-        
     </StyledApp>
   );
 }
+
+const StyledBar = styled.div`
+    width: 65%;
+    margin: auto;
+    margin-top: 1rem; 
+    height: 5px;
+    background: #9D1212;
+`;
 
 const StyledApp = styled.div`
 `;
