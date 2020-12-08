@@ -13,7 +13,6 @@ const Objectives = () => {
 };
 
 const StyledObjectives = styled.div`
-    background: #BEA6A1;
     width: 60%;
     text-align: right;
     margin-top: 5rem;

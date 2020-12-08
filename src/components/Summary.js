@@ -15,28 +15,23 @@ const Summary = () => {
             <ul>
                 <li>
                     <img src={Bacteria} alt="Bacteria"/>
-                    <h2>Micro-organismes</h2>
-                    <p>Les micro-organismes à connaître, leurs classification, caractéristiques et d'autres informations.</p>
+                    <p><strong>Micro-organismes : </strong> Les micro-organismes à connaître, leurs classification, caractéristiques et d'autres informations.</p>
                 </li>
                 <li>
                     <img src={Culture} alt="Culture"/>
-                    <h2>Milieux de culture</h2>
-                    <p>Les milieux de culture à connaître, leur composition, leur lecture.</p>
+                    <p><strong>Milieux de culture : </strong> Les milieux de culture à connaître, leur composition, leur lecture.</p>
                 </li>
                 <li>
                     <img src={Identification} alt="Identification"/>
-                    <h2>Test d'identification</h2>
-                    <p>Les tests d'identification à connaître, leur principe, les résultats.</p>
+                    <p><strong>Test d'identification : </strong> Les tests d'identification à connaître, leur principe, les résultats.</p>
                 </li>
                 <li>
                     <img src={Arbre} alt="Arbre"/>
-                    <h2>Arbre d'identification</h2>
-                    <p>Les arbres d'identification classiques.</p>
+                    <p><strong>Arbre d'identification : </strong> Les arbres d'identification classiques.</p>
                 </li>
                 <li>
                     <img src={Techniques} alt="Techniques"/>
-                    <h2>Techniques</h2>
-                    <p>Les techniques à connaître.</p>
+                    <p><strong>Techniques : </strong> Les techniques à connaître.</p>
                 </li>
             </ul>
         </StyledSummary>
@@ -44,7 +39,10 @@ const Summary = () => {
 };
 
 const StyledSummary = styled.div`
-    //background: lightblue;
+    margin: 1rem;
+    background: #FAE7E6;
+    border: solid 2px #56423E;
+    border-radius: 30px;
     width: 60%;
     padding: 1rem;
     h1 {
@@ -53,12 +51,17 @@ const StyledSummary = styled.div`
     }
     ul {
         li {
+            padding-bottom: 1rem;
             display: flex;
+            align-items: center;
             img {
-                width: 10%;
+                width: 65px;
+                height: 65px;
             }
-            h2 {
+            p {
+                padding-left: 1rem;
                 font-size: 1rem;
+                text-align: justify;    
             }
         }
     }

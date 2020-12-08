@@ -30,9 +30,9 @@ function App() {
 }
 
 const StyledBar = styled.div`
-    width: 65%;
+    width: 70%;
     margin: auto;
-    margin-top: 1rem; 
+    margin-top: 2rem; 
     height: 5px;
     background: #9D1212;
 `;

@@ -26,6 +26,7 @@ const StyledSubtitle = styled.div`
     }
     img {
         position: absolute;
+        width: 20%;
         right: 0%;
         top: 39%;
         text-align: right;
