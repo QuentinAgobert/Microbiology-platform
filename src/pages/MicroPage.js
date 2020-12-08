@@ -28,8 +28,9 @@ const MicroPage = () => {
 
 const StyledMicroPage = styled.div`
     background: lightblue;
-    width: 60%;
     margin: auto;
+    margin-top: 2rem;
+    width: 60%;
     display: flex;
     flex-direction: row;
 `;

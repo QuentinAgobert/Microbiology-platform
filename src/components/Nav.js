@@ -10,7 +10,7 @@ import Bacteria from "../img/Bacteria.svg";
 import Culture from "../img/Culture.svg";
 import Arbre from "../img/Arbre.svg";
 import Identification from "../img/Identification.svg";
-import Techniques from "../img/Techniques.svg";
+import Techniques from "../img/Techs.svg";
 
 const Nav = () => {
     return (

@@ -1,12 +1,14 @@
 // Images
+import Gram from "./img/Gram.jpg";
+import Culture from "./img/Culture.jpg";
 
 export const MicroState = () => {
     return [
         {
             name: "Emilio",
             classification: "Copine",
-            gramImg: "",
-            cultureImg: "",
+            gramImg: Gram,
+            cultureImg: Culture,
             caracteristics: "Grosssssssssse",
             complements: "Mais jolie",
         },
